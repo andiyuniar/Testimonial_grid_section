@@ -12,12 +12,88 @@ html {
 :root {
   --modviolet: hsl(263, 55%, 52%);
   --dkgreysblue: hsl(217, 19%, 35%);
+  --dkgreysblue50: hsl(217, 19%, 35%, 0.5);
   --dkblacksblue: hsl(219, 29%, 14%);
   --white: hsl(0, 0%, 100%);
+  --white50: hsla(0, 0%, 100%, 0.6);
+  --white70: hsla(0, 0%, 100%, 0.7);
   --ltgrey: hsl(0, 0%, 81%);
   --ltgreysblue: hsl(210, 46%, 95%);
 }
 
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--ltgreysblue);
+  /* padding: 4.3em 1.5em; */
+}
+
+section {
+  margin: 4.3em 1.5em;
+}
+
+.text_light {
+  color: var(--white);
+}
+
+.text_light50 {
+  color: var(--white50);
+}
+
+.text_dark {
+  color: var(--dkblacksblue);
+}
+
+.text_dark50 {
+  color: var(--dkgreysblue50);
+}
+
+h4 {
+  padding: 0;
+  margin: 0;
+}
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  padding: 1.6em 1.9em;
+  border-radius: 0.6rem;
+  margin-top: 1.6em;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title > img {
+  border: 3px solid var(--ltgrey);
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.info {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+.quote {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.first {
+  background-color: var(--modviolet);
+  color: var(--white70);
+}
+
+.second {
+  background-color: var(--dkgreysblue);
+}
+
+.third {
+  background-color: var(--white);
+}
+.fourth {
+  background-color: var(--dkblacksblue);
 }
