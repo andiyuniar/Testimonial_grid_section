@@ -1,0 +1,131 @@
+$modviolet: hsl(263, 55%, 52%);
+$dkgreysblue: hsl(217, 19%, 35%);
+$dkgreysblue50: rgba(72, 85, 106, 0.5);
+$dkblacksblue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$white50: hsla(0, 0%, 100%, 0.603);
+$white70: hsla(0, 0%, 100%, 0.7);
+$ltgrey: hsl(0, 0%, 81%);
+$ltgreysblue: hsl(210, 46%, 95%);
+$quotationImg: "images/bg-pattern-quotation.svg";
+$Desktop: 1440px;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: $ltgreysblue;
+}
+
+section {
+  margin: 4.3rem 1.5rem;
+
+  .card {
+    padding: 1.6rem 1.8rem;
+    border-radius: 0.6rem;
+    margin-top: 1.6rem;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2);
+
+    .card_title {
+      display: flex;
+      align-items: center;
+
+      img {
+        border: 0.19rem solid $ltgrey;
+        border-radius: 50%;
+        margin-right: 1rem;
+        width: 2.19rem;
+      }
+
+      h4 {
+        padding: 0;
+        margin: 0;
+      }
+
+      h5 {
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .card_info {
+      font-size: 1.3rem;
+      line-height: 1.2;
+    }
+
+    .card_quote {
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+  }
+
+  .card-violet {
+    background-color: $modviolet;
+    color: $white;
+    background-image: url($quotationImg);
+    background-repeat: no-repeat;
+    background-position: top right 1.56rem;
+
+    @media only screen and (min-width: $Desktop) {
+      grid-column: 1 / span 2;
+      background-image: url($quotationImg);
+      background-repeat: no-repeat;
+      background-position: top right 5rem;
+    }
+  }
+
+  .card-dkgreysblue {
+    background-color: $dkgreysblue;
+  }
+
+  .card-white {
+    background-color: $white;
+
+    @media only screen and (min-width: $Desktop) {
+      grid-column: 1;
+    }
+  }
+
+  .card-black {
+    background-color: $dkblacksblue;
+
+    @media only screen and (min-width: $Desktop) {
+      grid-row: 2;
+      grid-column: 2 / span 2;
+    }
+  }
+
+  .card-white--2 {
+    @media only screen and (min-width: $Desktop) {
+      grid-row: 1 / span 2;
+      grid-column: 4;
+    }
+  }
+
+  .text_light {
+    color: $white;
+  }
+
+  .text_light50 {
+    color: $white50;
+  }
+
+  .text_dark {
+    color: $dkblacksblue;
+  }
+
+  .text_dark50 {
+    color: $dkgreysblue50;
+  }
+
+  @media only screen and (min-width: $Desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 1.88rem;
+    margin: 10.3rem 12.19rem;
+  }
+}
