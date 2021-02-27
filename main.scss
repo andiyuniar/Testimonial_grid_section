@@ -55,15 +55,7 @@ section {
       padding: 0;
       margin: 0;
 
-      @if $backColor ==
-        $modviolet or
-        $backColor ==
-        $dkblacksblue or
-        $backColor ==
-        $dkgreysblue
-      {
-        color: $white;
-      } @else if $backColor == $white {
+      @if $backColor == $white {
         color: $dkblacksblue;
       } @else {
         color: $white;
@@ -74,15 +66,7 @@ section {
       padding: 0;
       margin: 0;
 
-      @if $backColor ==
-        $modviolet or
-        $backColor ==
-        $dkblacksblue or
-        $backColor ==
-        $dkgreysblue
-      {
-        color: $white50;
-      } @else if $backColor == $white {
+      @if $backColor == $white {
         color: $dkgreysblue50;
       } @else {
         color: $white50;
